@@ -3,8 +3,10 @@ import BurgerStack from "./components/BurgerStack/BurgerStack.jsx";
 import { useState } from "react";
 import "./App.css";
 
+// Main App component that renders the ingredient list and burger stack
 const App = () => {
   const availableIngredients = [
+    // List of available ingredients with their names and colors
     { name: "Kaiser Bun", color: "saddlebrown" },
     { name: "Sesame Bun", color: "sandybrown" },
     { name: "Gluten Free Bun", color: "peru" },
@@ -24,11 +26,13 @@ const App = () => {
   // Initialize a new useState for burger stack
   const [stack, setStack] = useState([]);
 
+  // Function to add an ingredient to the burger stack
   const addToBurger = (ingredient) => {
     setStack([...stack, ingredient]); // add ingredient to the stack
     console.log("Added to burger:", ingredient);
   };
 
+  // Function to remove an ingredient from the burger stack by index
   const removeFromBurger = (index) => {
     setStack(stack.filter((_, i) => i !== index)); // remove ingredient from the stack or at index
     console.log("Removed from burger at index:", index);
