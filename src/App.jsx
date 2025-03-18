@@ -28,13 +28,13 @@ const App = () => {
 
   // Function to add an ingredient to the burger stack
   const addToBurger = (ingredient) => {
-    setStack([...stack, ingredient]); // add ingredient to the stack
+    setStack([...stack, ingredient]); // Uses the spread operator to append the new ingredient to the stack
     console.log("Added to burger:", ingredient);
   };
 
   // Function to remove an ingredient from the burger stack by index
   const removeFromBurger = (index) => {
-    setStack(stack.filter((_, i) => i !== index)); // remove ingredient from the stack or at index
+    setStack(stack.filter((_, i) => i !== index)); // Uses .filter() to remove the ingredient at the specified index
     console.log("Removed from burger at index:", index);
   };
 
